@@ -1,3 +1,5 @@
+package array
+
 // 217
 
 fun containsDuplicate(nums: IntArray): Boolean {

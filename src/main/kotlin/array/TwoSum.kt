@@ -1,6 +1,6 @@
-// 1
+package array
 
-import utils.printArray
+// 1
 
 fun twoSum(nums: IntArray, target: Int): IntArray {
     val hashMap = HashMap<Int, Int>()

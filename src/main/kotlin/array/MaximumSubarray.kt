@@ -1,6 +1,9 @@
-// 53
-
+package array
 import kotlin.math.max
+
+// Kadane’s Algorithm
+// LeetCode: 53
+// https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/
 
 fun maxSubArray(nums: IntArray): Int {
     var max = nums[0]

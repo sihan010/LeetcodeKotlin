@@ -1,6 +1,7 @@
-// 121
-
+package array
 import kotlin.math.max
+
+// 121
 
 fun maxProfit(prices: IntArray): Int {
     var l = 0
@@ -8,7 +9,7 @@ fun maxProfit(prices: IntArray): Int {
     var p = 0
     val s = prices.size
     while(r<s){
-        if(prices[l]<prices[r])
+        if(prices[r]>prices[l])
             p = max(p, prices[r]-prices[l])
         else l=r
         r+=1

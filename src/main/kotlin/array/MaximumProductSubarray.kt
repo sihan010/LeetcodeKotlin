@@ -1,6 +1,7 @@
-// 152
-
+package array
 import kotlin.math.max
+
+// 152
 
 fun maxProduct(nums: IntArray): Int {
     var result = nums.maxOrNull() ?:1

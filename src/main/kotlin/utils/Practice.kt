@@ -1,3 +1,5 @@
+package utils
+
 fun main() {
 //    try {
 //        listOf(1, 2, 3, 4, 5, 6, 7, 8, 9).takeTillWithEx(9).printListTill(4)
