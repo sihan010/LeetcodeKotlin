@@ -2,7 +2,7 @@ package array
 
 // 1
 
-fun twoSum(nums: IntArray, target: Int): IntArray {
+private fun twoSum(nums: IntArray, target: Int): IntArray {
     val hashMap = HashMap<Int, Int>()
     for (i in nums.indices) {
         val diff = target - nums[i]

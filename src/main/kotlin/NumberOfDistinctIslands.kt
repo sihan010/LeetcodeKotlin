@@ -17,7 +17,7 @@ private fun distinctIslands(grid: Array<IntArray>): Int {
     return islands.size
 }
 
-fun generateIslandIdentity(grid: Array<IntArray>, i: Int, j: Int, m: Int, n: Int, identifier: String): String {
+private fun generateIslandIdentity(grid: Array<IntArray>, i: Int, j: Int, m: Int, n: Int, identifier: String): String {
     if (outOfBound(i, j, m, n) || grid[i][j] == 0)
         return "O"
     grid[i][j] = 0

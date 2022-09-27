@@ -2,7 +2,7 @@
 // https://leetcode.com/problems/unique-paths/
 // Dynamic Programming
 
-fun uniquePaths(m: Int, n: Int): Int {
+private fun uniquePaths(m: Int, n: Int): Int {
     val dp = Array(m) { IntArray(n) }
     for (i in 0 until m) {
         for (j in 0 until n) {

@@ -3,7 +3,7 @@ import utils.printIntArray
 
 // 238
 
-fun productOfArrayWithoutSelf(nums: IntArray): IntArray {
+private fun productOfArrayWithoutSelf(nums: IntArray): IntArray {
     val output = MutableList(nums.size){1}
     var prefix=1
     var postfix =1

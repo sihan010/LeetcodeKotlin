@@ -1,7 +1,7 @@
 // 1254
 // https://www.youtube.com/watch?v=MnD8KhBHgRo
 
-fun closedIsland(grid: Array<IntArray>): Int {
+private fun closedIsland(grid: Array<IntArray>): Int {
     val m = grid.size
     val n = grid[0].size
     var closedIslands = 0

@@ -11,6 +11,12 @@ fun <T> Array<T>.printArray(){
     println(joinToString(", ") { it.toString() })
 }
 
+fun Array<IntArray>.print2dArray(){
+    for(i in 0 until this.size){
+        println(this[i].joinToString(", ") { it.toString() })
+    }
+}
+
 fun IntArray.printIntArray(){
     println(joinToString(", ") { it.toString() })
 }

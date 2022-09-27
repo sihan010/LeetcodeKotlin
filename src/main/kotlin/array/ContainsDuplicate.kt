@@ -2,7 +2,7 @@ package array
 
 // 217
 
-fun containsDuplicate(nums: IntArray): Boolean {
+private fun containsDuplicate(nums: IntArray): Boolean {
     val visited = mutableSetOf<Int>()
     for (i in nums.indices) {
         if(visited.contains(nums[i]))

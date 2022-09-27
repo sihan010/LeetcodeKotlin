@@ -3,7 +3,7 @@ import kotlin.math.max
 
 // 121
 
-fun maxProfit(prices: IntArray): Int {
+private fun maxProfit(prices: IntArray): Int {
     var l = 0
     var r = 1
     var p = 0

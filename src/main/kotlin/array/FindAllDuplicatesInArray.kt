@@ -5,7 +5,7 @@ import kotlin.math.abs
 // 442
 // https://leetcode.com/problems/find-all-duplicates-in-an-array/
 
-fun findDuplicates(nums: IntArray): List<Int> {
+private fun findDuplicates(nums: IntArray): List<Int> {
     val result = mutableListOf<Int>()
     val indices = nums.indices
     for (i in indices) {

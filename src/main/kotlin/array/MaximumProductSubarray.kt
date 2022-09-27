@@ -3,7 +3,7 @@ import kotlin.math.max
 
 // 152
 
-fun maxProduct(nums: IntArray): Int {
+private fun maxProduct(nums: IntArray): Int {
     var result = nums.maxOrNull() ?:1
     var currentMin=1
     var currentMax=1

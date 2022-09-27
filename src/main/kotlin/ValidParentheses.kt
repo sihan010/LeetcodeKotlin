@@ -2,7 +2,7 @@ import java.util.Stack
 
 // 20
 
-fun isValid(s: String): Boolean {
+private fun isValid(s: String): Boolean {
     val st = Stack<Char>()
     val l = s.length
     for (i in 0 until l) {

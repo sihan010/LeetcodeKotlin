@@ -5,7 +5,7 @@ import kotlin.math.max
 // LeetCode: 53
 // https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/
 
-fun maxSubArray(nums: IntArray): Int {
+private fun maxSubArray(nums: IntArray): Int {
     var max = nums[0]
     var current = 0
     for(i in nums.indices){
