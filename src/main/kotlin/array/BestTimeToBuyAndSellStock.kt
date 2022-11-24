@@ -4,20 +4,20 @@ import kotlin.math.max
 // 121
 
 private fun maxProfit(prices: IntArray): Int {
-    var l = 0
-    var r = 1
-    var p = 0
-    val s = prices.size
-    while(r<s){
-        if(prices[r]>prices[l])
-            p = max(p, prices[r]-prices[l])
-        else l=r
-        r+=1
+    var buy=0
+    var sell=1
+    var profit = 0
+    while(sell<prices.size){
+        val currentProfit = prices[sell]-prices[buy]
+        profit = max(profit, currentProfit)
+        if(currentProfit<0)
+            buy=sell
+        sell++
     }
-    return p
+    return profit
 }
 
 fun main() {
-    val res = maxProfit(intArrayOf(1,2,4,2,5,7,2,4,9,0,9))
+    val res = maxProfit(intArrayOf(9,2,4,2,5,7,2,4,9,10,9))
     println(res)
 }

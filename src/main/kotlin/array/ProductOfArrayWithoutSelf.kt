@@ -4,21 +4,28 @@ import utils.printIntArray
 // 238
 
 private fun productOfArrayWithoutSelf(nums: IntArray): IntArray {
-    val output = MutableList(nums.size){1}
-    var prefix=1
-    var postfix =1
-    val indices = nums.indices
-    val reverseIndices = indices.reversed()
-    for(i in indices){
-        output[i] = prefix
-        prefix*=nums[i]
+    val prefix = MutableList(nums.size){0}
+    val postfix = MutableList(nums.size){0}
+    val result = MutableList(nums.size){0}
+    prefix[0]= nums[0]
+    for(i in 1 until nums.size){
+        prefix[i] =  prefix[i-1] * nums[i]
     }
 
-    for(i in reverseIndices){
-        output[i]*=postfix
-        postfix*=nums[i]
+    postfix[nums.size-1] = nums[nums.size-1]
+    for(i in nums.size-2 downTo 0){
+        postfix[i] =  postfix[i+1]* nums[i]
     }
-    return output.toIntArray()
+
+    for(i in nums.indices){
+        val pre = if(i-1<0) 1 else prefix[i-1]
+        val post = if(i+1>nums.size-1) 1 else postfix[i+1]
+        result[i] = pre*post
+    }
+
+//    println(prefix)
+//    println(postfix)
+    return result.toIntArray()
 }
 
 fun main() {
