@@ -23,7 +23,7 @@ private fun myAtoi(s: String): Int {
     for (i in indices) {
         if (!trimmed[i].isDigit())
             break
-        res = res * BigInteger.TEN + (trimmed[i].toInt() - 48).toBigInteger()
+        res = res * BigInteger.TEN + (trimmed[i] - '0').toBigInteger()
     }
     res*=sign.toBigInteger()
     return if (res < Int.MIN_VALUE.toBigInteger())
@@ -34,6 +34,6 @@ private fun myAtoi(s: String): Int {
 }
 
 fun main() {
-    val res = myAtoi("-92233")
+    val res = myAtoi("    -9223")
     println(res)
 }
